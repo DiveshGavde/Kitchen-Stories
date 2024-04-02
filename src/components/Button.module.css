@@ -1,0 +1,14 @@
+.back_button {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.back_button button {
+  background: linear-gradient(to right bottom, #f5af19, #f12711);
+  border: none;
+  color: #fff;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 50px;
+}

@@ -1,0 +1,15 @@
+.view_bookmarks {
+  position: absolute;
+  padding: 16px 0;
+  right: -24px;
+  top: 67px;
+  width: 320px;
+  z-index: 10;
+  background-color: #fff;
+  box-shadow: 0 0.8rem 5rem 2rem rgba(97, 85, 81, 0.1);
+  transition: all 0.5s 0.2s;
+}
+
+.view_bookmarks p {
+  padding-left: 10px;
+}

@@ -1,0 +1,57 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 90vw;
+  padding-left: 60px;
+  padding-top: 24px;
+}
+
+.main_page {
+  padding: 14px;
+}
+
+header h2 {
+  font-weight: 600;
+}
+
+header svg {
+  width: 40px;
+}
+
+header button {
+  background: none;
+
+  border: none;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+header button:hover {
+  color: rgba(13, 7, 7, 0.721);
+}
+
+.spans {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.icons {
+  display: flex;
+  gap: 20px;
+}
+svg {
+  color: #333;
+}
+
+.nav_bar {
+  padding-right: 50px;
+}
+
+@media screen and (max-width: 950px) {
+  header {
+    max-width: 80vw;
+    padding-left: 40px;
+  }
+}

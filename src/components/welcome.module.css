@@ -1,0 +1,86 @@
+.recipe1 {
+  width: 100%;
+}
+
+.recipe2 {
+  width: 45%;
+  height: 50%;
+  position: relative;
+  right: 70px;
+  bottom: 50px;
+  border-radius: 5%;
+}
+
+.message h2 {
+  font-weight: 600;
+  font-size: 64px;
+  padding-bottom: 30px;
+}
+.message {
+  display: flex;
+  margin-top: 34px;
+  gap: 74px;
+  padding: 24px;
+}
+
+.description {
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+.message button {
+  font-size: 18px;
+  padding: 14px;
+  background: linear-gradient(to right bottom, #f5af19, #f12711);
+  color: #fff;
+  border-radius: 50px;
+  border: none;
+  transform: scale(1);
+  transition: all 0.2s;
+}
+
+.message button:hover {
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 960px) {
+  .message {
+    gap: 44px;
+    padding: 12px;
+  }
+  .message h2 {
+    font-size: 40px;
+  }
+
+  .recipe1 {
+    width: 80%;
+  }
+
+  .description {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .message button {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .message {
+    display: grid;
+    grid-template-columns: 1.7fr 1fr;
+  }
+  .message h2 {
+    font-size: 40px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .recipe1 {
+    max-width: 100%;
+  }
+}
