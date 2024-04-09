@@ -47,6 +47,7 @@ export async function action({ request, params }) {
   });
 
   return {
+    results,
     result,
     state,
   };

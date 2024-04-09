@@ -4,10 +4,11 @@ import { useState } from "react";
 import Spinner from "./spinner";
 import RecipeDetails from "./RecipeDetails";
 import classes from "./searchpanel.module.css";
-import Bookmark from "./Bookmark";
+import Bookmark from "./Bookmark.js";
 export default function Search({ recipes }) {
   const data = useActionData();
   const [displayRecipe, setDisplayRecipe] = useState(true);
+  const [isClicked, setIsClicked] = useState(false);
 
   let displayRecipesOnPage;
   let start;
@@ -19,8 +20,14 @@ export default function Search({ recipes }) {
     displayRecipesOnPage = data.result.slice(start, end);
   }
 
+  function onTap() {
+    setIsClicked((toggle) => !toggle);
+    console.log(isClicked);
+  }
+
   const navigation = useNavigation();
   const isLoading = navigation.state === "submitting";
+  const isSubmitting = navigation.state === "loading";
 
   function increaseOnClick(e) {
     e.preventDefault();
@@ -34,6 +41,7 @@ export default function Search({ recipes }) {
     data.state.page -= 1;
     setDisplayRecipe((toggle) => !toggle);
   }
+
   return (
     <section className="section">
       <div className={`${classes.container} ${classes.searchheader}`}>
@@ -57,9 +65,9 @@ export default function Search({ recipes }) {
           <button>Search</button>
         </Form>
 
-        <div>
+        <div className={classes.recipe_navbar}>
           <ul className={classes.userchoices}>
-            {/* <li>
+            <li id={classes.listitem}>
               <button>
                 <Link to="addrecipe" className={classes.link}>
                   <svg
@@ -73,9 +81,9 @@ export default function Search({ recipes }) {
                 </Link>
               </button>
 
-              <span>Add Recipe</span>
-            </li> */}
-            {/* <li>
+              <span id={classes.span}>Add Recipe</span>
+            </li>
+            <li onClick={onTap} id={classes.listitem}>
               <button>
                 <svg
                   className={classes.listicon}
@@ -87,9 +95,9 @@ export default function Search({ recipes }) {
                 </svg>
               </button>
 
-              <span>Bookmarks</span>
-              <Bookmark />
-            </li> */}
+              <span id={classes.span}>Your recipes</span>
+              <Bookmark addedRecipe={isClicked} />
+            </li>
           </ul>
         </div>
       </div>
@@ -109,7 +117,11 @@ export default function Search({ recipes }) {
           </div>
         )}
 
-        {isLoading && <Spinner />}
+        {data?.results?.length === 0 && (
+          <p>Sorry,Could not find the recipes you are looking for</p>
+        )}
+
+        {(isLoading || isSubmitting) && <Spinner />}
         {recipes && <RecipeDetails loadedRecipe={displayRecipesOnPage} />}
         <div
           className={

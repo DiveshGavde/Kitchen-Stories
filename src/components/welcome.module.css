@@ -84,3 +84,40 @@
     max-width: 100%;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .message h2 {
+    font-size: 28px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+
+  .message button {
+    font-size: 10px;
+    padding: 8px 10px;
+  }
+
+  .recipe1 {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .message {
+    margin-top: 20px;
+  }
+  .message h2 {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 10px;
+  }
+
+  .message button {
+    font-size: 8px;
+    padding: 6px 10px;
+  }
+}

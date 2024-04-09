@@ -68,9 +68,8 @@ h2 {
   cursor: pointer;
 }
 
-.userchoices li {
+#listitem {
   display: flex;
-  position: relative;
   flex-direction: row;
   align-items: center;
 }
@@ -88,7 +87,7 @@ h2 {
   cursor: pointer;
 }
 
-.userchoices span {
+#span {
   color: #353333;
 }
 
@@ -161,7 +160,11 @@ h2 {
 .link {
   color: inherit;
 }
-@media screen and (max-width: 1005px) {
+
+.recipe_navbar {
+  position: relative;
+}
+@media screen and (max-width: 1100px) {
   .search input {
     padding: 8px 30px;
     width: 15rem;
@@ -172,10 +175,10 @@ h2 {
   }
 }
 
-@media screen and (max-width: 890px) {
+@media screen and (max-width: 960px) {
   .search input {
     padding: 8px 22px;
-    width: 8rem;
+    width: 12rem;
     font-size: 10px;
   }
 
@@ -200,7 +203,106 @@ h2 {
     width: 20px;
   }
 
-  .userchoices span {
+  #span {
     font-size: 14px;
+  }
+
+  .pages_button {
+    font-size: 14px;
+    padding: 0 16px;
+    border-radius: 50px;
+  }
+
+  .arrow {
+    height: 2.5rem;
+    width: 20px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .search input {
+    padding: 8px 16px;
+    width: 8rem;
+    font-size: 10px;
+  }
+
+  .search button {
+    padding: 6px 16px;
+    font-size: 10px;
+  }
+
+  .listicon {
+    width: 15px;
+  }
+
+  #span {
+    font-size: 12px;
+  }
+
+  h2 {
+    font-size: 14px;
+  }
+
+  .message p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  h2 {
+    font-size: 12px;
+  }
+
+  .logo {
+    width: 18px;
+  }
+  .search input {
+    padding: 6px 14px;
+    width: 6rem;
+  }
+
+  .search button {
+    padding: 6px 12px;
+    font-size: 8px;
+  }
+
+  .listicon {
+    width: 12px;
+  }
+
+  #span {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .search input {
+    padding: 4px 8px;
+    font-size: 8px;
+  }
+
+  .search {
+    width: 12rem;
+  }
+
+  .search button {
+    margin-left: 28px;
+    padding: 6px 8px;
+  }
+
+  .recipe_navbar {
+    grid-column: 1/-1;
+    justify-self: end;
+    margin-top: 12px;
+    margin-right: 20px;
+  }
+
+  .message p {
+    font-size: 15px;
   }
 }

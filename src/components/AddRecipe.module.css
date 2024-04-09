@@ -100,3 +100,70 @@
 dialog {
   border: none;
 }
+
+.failed_message {
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.success_message {
+  text-align: center;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 1000px) {
+  .addrecipe_window {
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .addrecipe_window {
+    width: 550px;
+  }
+  .upload_column {
+    font-size: 18px;
+    gap: 28px;
+  }
+
+  .upload_column input {
+    font-size: 8px;
+    width: 8rem;
+  }
+  .upload_column label {
+    font-size: 12px;
+  }
+
+  .upload {
+    gap: 24px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .addrecipe_window {
+    width: 410px;
+  }
+
+  .upload_column {
+    font-size: 16px;
+    gap: 22px;
+  }
+  .upload_column input {
+    width: 6rem;
+  }
+
+  .upload {
+    gap: 22px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .addrecipe_window {
+    width: 300px;
+  }
+
+  .upload {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

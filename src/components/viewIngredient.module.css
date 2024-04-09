@@ -95,3 +95,20 @@
   transform: translateY(30px);
   border: none;
 }
+
+@media screen and (max-width: 450px) {
+  .icons {
+    width: 25px;
+  }
+
+  .figure span {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .about_recipe {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

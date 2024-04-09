@@ -6,8 +6,8 @@ export default function Welcome() {
       <div>
         <h2>The Easiest Way To Make Your Favorite Meal</h2>
         <p className={classes.description}>
-          Discover 1000+recipes in your hand with the best recipe.Help you to
-          find the easiest way to cook
+          Discover 1,00,000+recipes in your hand with the best recipe.Help you
+          to find the easiest way to cook
         </p>
         <Link to="search">
           <button className={classes.searchbtn}>Explore Recipe</button>

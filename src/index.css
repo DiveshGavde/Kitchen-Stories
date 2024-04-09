@@ -64,6 +64,14 @@ span {
 @media screen and (max-width: 850px) {
   main {
     max-width: 600px;
-    height: 80vh;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  body {
+    background-image: none;
+  }
+  main {
+    margin: 4vh auto;
   }
 }

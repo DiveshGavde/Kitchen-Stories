@@ -24,7 +24,7 @@ export default function Ingredient() {
               {items.quantity ? new Fraction(items.quantity).toString() : ""}
             </span>
 
-            <div>
+            <div className={classes.ing}>
               <span className={classes.unit}>{items.unit}</span>
               {items.description}
             </div>

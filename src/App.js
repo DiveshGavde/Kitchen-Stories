@@ -2,11 +2,11 @@ import HomePage from "./components/HomePage";
 
 import SearchPage, { action as searchActions } from "./pages/searchResult";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import AddRecipe from "./components/AddRecipe";
+import AddRecipe, {
+  action as addRecipeActionData,
+} from "./components/AddRecipe";
 import Error from "./pages/Error";
-import ViewRecipe, {
-  action as recipeDetailAction,
-} from "./pages/ViewRecipePage";
+import ViewRecipe, { loader as loadRecipe } from "./pages/ViewRecipePage";
 import RecipeDetails from "./components/RecipeDetails";
 
 const router = createBrowserRouter([
@@ -24,13 +24,14 @@ const router = createBrowserRouter([
       {
         path: "addrecipe",
         element: <AddRecipe />,
+        action: addRecipeActionData,
       },
     ],
   },
   {
     path: "/search/:eventid",
     element: <ViewRecipe />,
-    loader: recipeDetailAction,
+    loader: loadRecipe,
   },
 ]);
 
